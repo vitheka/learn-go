@@ -4,35 +4,25 @@ import "fmt"
 
 func main() {
 
-	if retorno, err := test(); err != nil {
-		fmt.Println("Houve erro")
+	// for i := 0; i < 5; i++ {
+	// 	fmt.Println(i)
+	// }
+
+	// test := 8
+
+	// for test <= 10 {
+	// 	fmt.Println("Valor ", test)
+	// 	test++
+	// }
+
+	test := []string{"test1", "teste2", "test3"}
+
+	for i, value := range test {
+		fmt.Println(value, i)
 	}
- 
-	// user := user{
-	// 	name:  "vitor",
-	// 	age:   17,
-	// 	test2: "test2",
-	// }
 
-	// fmt.Println(user)
-
-	// testJson := map[string]interface{}{
-
-	// 	"nome":  "vitor",
-	// 	"idade": 25,
-	// }
-
-	// fmt.Printf("%T", testJson)
-
-	//test := 30.0
-	//fmt.Printf("%T", test)
+	for _, value := range test {
+		fmt.Println("Ignorando " + value)
+	}
 
 }
-
-func test
-
-// type user struct {
-	// name  string
-	// age   int
-	// test2 string
-// }
