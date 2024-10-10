@@ -1,28 +1,39 @@
 package main
 
-import "fmt"
+import (
+	//"errors"
+	"fmt"
+)
+
+//funcao anonima
 
 func main() {
 
-	// for i := 0; i < 5; i++ {
-	// 	fmt.Println(i)
-	// }
-
-	// test := 8
-
-	// for test <= 10 {
-	// 	fmt.Println("Valor ", test)
-	// 	test++
-	// }
-
-	test := []string{"test1", "teste2", "test3"}
-
-	for i, value := range test {
-		fmt.Println(value, i)
-	}
-
-	for _, value := range test {
-		fmt.Println("Ignorando " + value)
-	}
+	test()
 
 }
+
+func test() {
+
+	func(valorString string, valorInt int) {
+		fmt.Println(valorString, valorInt)
+	}("otavio", 20)
+}
+
+//funcao
+
+// func main() {
+
+// 	value, err := test()
+
+// 	if err != nil {
+// 		fmt.Println(err)
+// 	}
+
+// 	fmt.Println(value)
+
+// }
+
+// func test() (string, error) {
+// 	return "", errors.New("test")
+// }
