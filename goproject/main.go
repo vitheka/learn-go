@@ -1,30 +1,45 @@
 package main
 
 /*
+antes da v1.18
 
-Estrutura de pastas e GOPATH
-~/go
-/pkg lugar onde o guarda todas as dependencias já instaladas
-em seus projeto.
+o tipo interface{} é o no "anny", ele é o que chamam de interface vazia
 
-primeiro ele da um git clone e joga dentro da /pkg
+func userTest(user interface{}) {
 
-/bin lugar onde o go guarda os binarios que "go install" compila
+	switch v:= user.(type) {
 
-$GOROOT é onde fica guardado o código go, literalmente.
+    case UserTest1:
 
-go modules - é uma coleção de pacotes go guardado com o nome de go.mod
+	case UserTest2:
 
-//indirect na frente do pacote, quer dizer que alguma de suas dependencias
-dependem desse pacote no qual está marcado.
+	default:
+		panic("Invalid type!")
 
-go.sum aponta os hash dos commit e os pacotes. ele é autogerado.const
+	}
 
-pseudo versoes
+}
 
+---------------comparar tipos any----------------
 
+func anyTest[T comparable](arg1 T, arg2 T) {
+	fmt.Println(arg1 == arg2)
+}
 
+func main() {
+	anyTest(1, 1)
+}
 
+------------------------------------------------
+Token ~ em go ou "Elemento aproximação"
+
+type AnyString interface {
+	~string
+}
+
+type ApproximateMyString interface{
+	~MyString
+}
 
 */
 
